@@ -15,9 +15,6 @@ using namespace std;
 #define fff ff
 #define sss ss.ff
 #define ttt ss.ss
-#define INF (1 << 30)
-#define LLF (1ll << 60)
-#define PRIME (1000000007)
 #define FASTIO std::ios::sync_with_stdio(false)
 
 #ifdef DEBUG
@@ -37,22 +34,24 @@ using namespace std;
 
 #define all(x) x.begin(), x.end()
 
-typedef long double ld;
-typedef long long ll;
-typedef unsigned long long ull;
-typedef vector<int> vi;
-typedef vector<ll> vll;
-typedef pair<int, int> ii;
-typedef tuple<int, int, int> iii;
-typedef vector<ii> vii;
-typedef vector<iii> viii;
-typedef vector<string> vs;
+using ld = long double;
+using ll = long long;
+using vi = vector<int>;
+using vll = vector<ll>;
+using ii = pair<ll, ll>;
+using iii = tuple<int, int, int>;
+using vii = vector<ii>;
+using viii = vector<iii>;
+using vs = vector<string>;
 
 template <typename T, typename B = null_type>
 using oset =
     tree<T, B, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 // find_by_order / order_of_key
 
+const int PRIME = 1e9 + 7;
+const int INF = 1 << 30;
+const ll LLF = 1ll << 60;
 const ld eps = 1e-6;
 
 ll fexp(ll b, ll e, ll p = PRIME) {
@@ -86,9 +85,23 @@ struct ghash {  // large odd number for C
   ll operator()(ll x) const { return __builtin_bswap64(x * C); }
 };
 
-void ae(ll val) {
-  cout << val << endl;
-  exit(0);
-}
+#define ae(val)                \
+  {                            \
+    cout << (((val))) << endl; \
+    exit(0);                   \
+  }
+
+#define ar(val)                \
+  {                            \
+    cout << (((val))) << endl; \
+    return;                    \
+  }
 
 /*-----------------END TEMPLATE-----------------*/
+
+// const int N = 1e5 + 50;
+
+// int n;
+// int a[N];
+
+int(((((((((((((((main)))))))))))))))() { FASTIO; }
