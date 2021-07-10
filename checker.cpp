@@ -105,8 +105,17 @@ struct ghash {  // large odd number for C
 
 /*-----------------END TEMPLATE-----------------*/
 
-int(((((((((((((((main)))))))))))))))() {
+int(((((((((((((((main)))))))))))))))(int, char* argv[]) {
   FASTIO;
-  // int t; cin >> t;
-  // rep(i, 0, t) solve();
+  ifstream input(argv[1]), solution(argv[2]), output(argv[3]);
+
+  // checking a+b
+
+  int x;
+  solution >> x;
+
+  int y;
+  output >> y;
+
+  assert(x == y);
 }

@@ -103,10 +103,26 @@ struct ghash {  // large odd number for C
     continue;                  \
   }
 
+minstd_rand rng(
+    chrono::high_resolution_clock::now().time_since_epoch().count());
+template <typename T>
+T randint(T a, T b) {
+  return uniform_int_distribution<T>(a, b)(rng);
+}
+template <typename T>
+T uniform(T a, T b) {
+  return uniform_real_distribution<T>(a, b)(rng);
+}
+
 /*-----------------END TEMPLATE-----------------*/
 
-int(((((((((((((((main)))))))))))))))() {
+int(((((((((((((((main)))))))))))))))(int, char* argv[]) {
   FASTIO;
-  // int t; cin >> t;
-  // rep(i, 0, t) solve();
+
+  // generating a+b
+
+  int a = randint(0, 100000);
+  int b = randint(0, 100000);
+
+  cout << a << ' ' << b << endl;
 }
